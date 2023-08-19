@@ -1,0 +1,36 @@
+QUESTAO 01-
+import java.util.Scanner;
+public class Main
+{
+public static void main(String[] args) {
+ Scanner scan = new Scanner(System.in);
+ int x, y, resultado;
+ 
+ System.out.println("digite o primeiro numero:");
+ x=scan.nextInt();
+ System.out.println("digite o segundo numero:");
+ y=scan.nextInt();
+ System.out.println("digite o simbolo:");
+ String num = scan.next();
+if (num.equals("+")){
+ resultado = x+y;
+ System.out.println("resultado: " +resultado);
+}
+else if (num.equals("-")){
+ resultado = x-y;
+ System.out.println("resultado: " +resultado);
+}
+else if (num.equals("*")){
+ resultado = x*y;
+ System.out.println("resultado: " +resultado);
+}
+else if (num.equals("/") && y != 0){
+ resultado = x/y;
+ System.out.println("resultado: " +resultado);
+}
+else {
+System.out.println("ocorreu um erro, tente novamente!");
+ 
+ }
+ }
+}

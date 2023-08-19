@@ -1,0 +1,18 @@
+QUESTAO 04 -
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner scan = new Scanner(System.in);
+int resultado;
+do {
+System.out.println("Digite a senha: ");
+String senha = scan.nextLine();
+resultado = senha.compareTo("a76dk09");
+if (resultado != 0) {
+System.out.println("SENHA INVALIDA");
+} else {
+System.out.println("ACESSO PERMITIDO");
+}
+} while (resultado != 0);
+}
+}

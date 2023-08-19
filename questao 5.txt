@@ -1,0 +1,26 @@
+QUESTAO 05-
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner scan = new Scanner(System.in);
+int n;
+float soma=0, media=0, desvio=0, totaldesvio=0, divisao=0;
+System.out.println("Insira o tamanho do vetor: ");
+n = scan.nextInt();
+float vet[] = new float[n];
+for (int i = 0; i<n; i++) {
+System.out.println("Insira o valor "+i+" do vetor:");
+vet[i]=scan.nextFloat();
+soma = soma+vet[i];
+}
+media = soma/n;
+for (int j=0; j<n; j++) {
+desvio = (media - vet[j])*(media - vet[j]);
+System.out.println("Desvio do numero "+vet[j]+": " +desvio);
+totaldesvio= totaldesvio + desvio;
+}
+divisao= totaldesvio/(n-1);
+System.out.println("\nDesvio padrao S: "+Math.sqrt(divisao));
+System.out.println("Media X: "+media);
+}
+}

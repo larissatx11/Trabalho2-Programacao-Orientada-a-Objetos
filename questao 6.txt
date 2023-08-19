@@ -1,0 +1,37 @@
+QUESTAO 06-
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner scan = new Scanner(System.in);
+int H1=0, M1=0, H2=0, M2=0, totalhoras=0, totalmin, total=0;
+System.out.println("Insira a hora e minuto que voce dormiu e a hora e minuto que 
+acordou, respectivamente:");
+H1 = scan.nextInt();
+M1 = scan.nextInt();
+H2 = scan.nextInt();
+M2 = scan.nextInt();
+if (H1>=0 && H1<=23 && M1>=0 && M1<=59 && H2>=0 && H2<=23 && M2>=0 && 
+M2<=59) {
+if(H1 > H2) {
+totalhoras = ((23-H1)+H2)*60; //converter horas para minutos
+totalmin = (60-M1) + M2; 
+total = totalhoras + totalmin;
+System.out.println(total);
+}
+else if (H1 < H2) {
+totalhoras = (H2 - H1)*60;
+totalmin = M2 - M1;
+total = totalhoras + totalmin;
+System.out.println(total);
+}
+else if (H1 == H2 && M1 >= M2) {
+totalhoras = 24*60;
+totalmin = M1 - M2;
+total = totalhoras + totalmin;
+System.out.println(total);
+}
+else {
+totalhoras = 0;
+totalmin = M2 - M1;
+}
+}
